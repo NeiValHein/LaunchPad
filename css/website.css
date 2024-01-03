@@ -1,0 +1,71 @@
+body.pwa {
+	background-color: var(--pwa-color-primary);
+	color: var(--pwa-color-font);
+	font-family: monospace;
+}
+.pwa a {
+	color: var(--pwa-color-button);
+}
+.pwa .img-fluid {
+	max-width: 100%;
+	height: auto;
+	margin: auto;
+}
+.pwa .loader {
+	margin: 0 auto;
+	width: 24px;
+	height: 24px;
+	animation: spin .3s linear infinite;
+	border: 2px double var(--pwa-color-button);
+	border-radius: 50%;
+	border-right: 2px solid var(--pwa-color-button);
+	border-right-style: dotted;
+	cursor: progress;
+}
+.pwa-loader {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: var(--pwa-color-primary);
+	z-index: 999;
+}
+.pwa .offline-container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: var(--pwa-color-secondary);
+	color: var(--pwa-color-font);
+	text-align: center;
+}
+.pwa .content-container {
+	padding: 50px;
+}
+.pwa .container {
+	display: flex;
+	flex-wrap: wrap;
+	margin: 10px;
+}
+.pwa .container .popup {
+	margin: 10px;
+	position: relative;
+	left: initial;
+}
+.pwa .visible-popup {
+	opacity: 1;
+	transform: none;
+	position: initial;
+}
+.pwa .text-center {
+	text-align: center;
+}
+@keyframes spin {
+	100% {
+		transform: rotate(360deg);
+	}
+}

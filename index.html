@@ -1,0 +1,94 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LaunchPad</title>
+	<link rel="icon" type="image/svg+xml" href="/LaunchPad/img/pwa/pwa-icon.svg">
+	<meta name="color-scheme" content="dark light">
+	<meta name="theme-color" content="#FFFFFF">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Launchpad">
+	<link rel="apple-touch-icon" href="/img/pwa/apple-touch-icon.png">
+	<link rel="stylesheet" href="/LaunchPad/css/pwa.css">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="manifest" href="/LaunchPad/manifest.json">
+	<link rel="stylesheet" href="/LaunchPad/css/pwa.css">
+	<link rel="stylesheet" href="/LaunchPad/css/website.css">
+</head>
+<body class="pwa">
+	<div class="pwa-loader">
+		<div class="loader"></div>
+	</div>
+	<div class="content-container">
+		<div class="pwa-container">
+			<div class="text-center">
+				<img src="/LaunchPad/img/pwa/192-icon.png" alt="">
+				<h2 class="text-bold">LaunchPad - What to know about PWAs</h2>
+				<hr>
+				<p>Progressive Web Apps (PWAs) combine the strengths of websites and mobile apps for a fast, seamless user experience directly from the browser. With features like push notifications and offline access, they offer app-like functionality while remaining accessible like traditional web applications.</p>
+				<h2 class="text-bold">LaunchPad - What services I offer</h2>
+				<hr>
+				<p>In my <a href="https://www.fiverr.com/neivalhein/do-your-website-a-pwa-installable-and-offline-experience" target="_blank">Gig</a> I offer to convert your existing website into a PWA, depending on which plan / extra you choose you will get different results</p>
+				<h2 class="text-bold">LaunchPad - My Gig Plans</h2>
+				<hr>
+				<p>
+					<h3>Basic:</h3> In this plan you only get the code of the PWA + Offline implementation for your web site, an external or yourself must do the installation in the hosting. Price 5$.
+					<h3>Standard:</h3> In this plan you only get the code of the PWA + Offline + custom installation popup implementation for your web site, an external or yourself must do the installation in the hosting. Price 10$.
+					<h3>Premium:</h3> In this plan you get the PWA code + Offline + custom installation popup implementation for your website and I take care of the installation in the hosting. Price 15$.
+				</p>
+				<h2 class="text-bold">LaunchPad - My Gig Extras</h2>
+				<hr>
+				<p>
+					<h3>Content Upload:</h3> In this extra service I take care of the source code installation. Price 5$.
+					<h3>Push Notifications:</h3> In this extra service I can add a basic push notifications implementation using firebase Cloud Messaging or Onesignal. Price 10$.
+				</p>
+				<h2 class="text-bold">LaunchPad - My PWA Implementations</h2>
+				<hr>
+				<p>
+					<h3>Installation:</h3>In this implementation your website will be able to be installable. Plans that contain this implementation: Basic, Standard, Premium.
+					<h3>Offline:</h3>In this implementation your website will be able to display a static page when your visitors access without internet connection, <a href="/LaunchPad/offline.html" target="_blank">click here to open offline page</a> or you can disable your internet access and reload this page. Plans that contain this implementation: Basic, Standard, Premium.
+					<h3>Custom Installation Popup:</h3>In this implementation your website will be able to display a pwa installation popup to the users, which will show different messages about the installation depending on the user's device. Click the next button to open the popup. Plans that contain this implementation: Standard, Premium.
+				</p>
+				<h2 class="text-bold">LaunchPad - My PWA Custom Installation Popup</h2>
+				<hr>
+				<p>My custom PWA installation popup serves to attract more users to the PWA, and is also used to support iOS users since Apple does not show any installation options in the browser interface.</p>
+				<span class="pwa-primary-btn pwa-btn">Open Custom Installation Popup</span>
+
+
+				<h2 class="text-bold">LaunchPad - My PWA Custom Installation Popup Messages</h2>
+				<hr>
+				<p>My PWA custom installation popup messages vary depending on the user's device due to some limitations on iOS, the first popup will be the one displayed on desktop and android, the second one will be the one displayed on iOS.</p>
+
+				<div class="container">
+					<div class="popup small-popup visible-popup">
+						<span class="small-close pwa-popup-close" title="Back"></span>
+						<h2 class="popup-header">LaunchPad</h2>
+						<div class="popup-body">
+							<p>LaunchPad is designed to be used as a app, which translates into a better user experience, want to try the app?</p>
+							<button class="pwa-primary-btn pwa-btn">Try now</button>
+						</div>
+					</div>
+
+					<div class="popup small-popup visible-popup">
+						<span class="small-close pwa-popup-close" title="Back"></span>
+						<h2 class="popup-header">PWA Launchpad</h2>
+						<div class="popup-body">
+							<p>If you are a safari user please follow these instructions:
+								<br>
+								<br>
+								To install our app you must tap <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 640 640"><path fill="currentColor" d="M128 320c0-35.2 28.8-64 64-64h256c35.2 0 64 28.8 64 64v256c0 35.2-28.8 64-64 64h-256c-35.2 0-64-28.8-64-64v-256zM192 320v256h256v-256h-64v-64h-128v64h-64zM288 122.56v389.44h64v-389.44l98.24 98.24 45.44-45.12-175.68-175.68-176 176 45.44 44.8 98.56-97.92z"></path></svg> in safari and add our app to your Home Screen.
+								<hr>
+								<br>
+							If you are not a safari user unfortunately you will not be able to install our app.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="/LaunchPad/js/pwa.js"></script>
+	<script src="/LaunchPad/js/website.js"></script>
+	<span class="pwa pwa-btn pwa-float-btn"></span>
+</body>
+</html>

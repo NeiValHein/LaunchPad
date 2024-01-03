@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>LaunchPad (Offline)</title>
+	<link rel="icon" type="image/svg+xml" href="/LaunchPad/img/pwa/pwa-icon.svg">
+	<meta name="color-scheme" content="dark light">
+	<meta name="theme-color" content="#FFFFFF">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="application-name" content="Launchpad">
+	<link rel="apple-touch-icon" href="/LaunchPad/img/pwa/apple-touch-icon.png">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="manifest" href="/LaunchPad/manifest.json">
+	<style>
+		.pwa {
+			--pwa-color-primary: #FFFFFF;
+			--pwa-color-secondary: #FFFFFF;
+			--pwa-color-font: #000000;
+			--pwa-color-font-btn: #FFFFFF;
+			--pwa-color-button: #3e8ed0;
+			--pwa-color-button-hover: #3476ad;
+			-webkit-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		body.pwa {
+			background-color: var(--pwa-color-primary);
+			color: var(--pwa-color-font);
+			font-family: monospace;
+		}
+		.pwa .pwa-primary-btn {
+			font-weight: 400;
+			color: var(--pwa-color-font-btn);
+			text-align: center;
+			text-decoration: none;
+			cursor: pointer;
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+			vertical-align: middle;
+			font-size: 1rem;
+			line-height: 1.5;
+			background-color: var(--pwa-color-button);
+			border: none;
+			border-radius: 16px;
+			max-width: 100%;
+			padding: .375rem .75rem;	
+		}
+		.pwa .pwa-primary-btn:hover {
+			background-color: var(--pwa-color-button-hover);
+			color: var(--pwa-color-primary);
+			border: 2px solid var(--pwa-color-button);
+			text-decoration: none;
+			border: none;
+			outline: 0;
+			box-shadow: none;
+		}
+		.pwa .pwa-primary-btn:focus {
+			box-shadow: var(--pwa-color-button) 0px 0px 5px 0px;
+			border: none;
+			outline: 0;
+		}
+		.pwa .offline-container {
+			position: fixed;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background: var(--pwa-color-secondary);
+			color: var(--pwa-color-font);
+			text-align: center;
+		}
+		.pwa .img-fluid {
+			max-width: 100%;
+			height: auto;
+			margin: auto;
+		}
+		.pwa .loader {
+			margin: 0 auto;
+			width: 24px;
+			height: 24px;
+			animation: spin .3s linear infinite;
+			border: 2px double var(--pwa-color-button);
+			border-radius: 50%;
+			border-right: 2px solid var(--pwa-color-button);
+			border-right-style: dotted;
+			cursor: progress;
+		}
+		.pwa-loader {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: fixed;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background: var(--pwa-color-primary);
+			z-index: 999;
+		}
+		@keyframes spin {
+			100% {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+</head>
+<body class="pwa">
+	<div class="pwa-loader">
+		<div class="loader"></div>
+	</div>
+	<div class="offline-container">
+		<div class="container">
+			<div class="text-center">
+				<img src="/LaunchPad/img/pwa/192-icon.png" class="img-fluid">
+				<h2 class="text-bold">You are without internet connection.</h2>
+				<a href="" class="pwa-primary-btn">Reload</a>
+			</div>
+		</div>
+	</div>
+	<script>
+		window.addEventListener('load', () => {
+			let pwaLoader = document.querySelector('.pwa-loader');
+			setTimeout(() => {
+				pwaLoader.remove();
+			}, 500)
+		});
+	</script>
+</body>
+</html>

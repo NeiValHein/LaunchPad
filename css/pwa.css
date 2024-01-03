@@ -1,0 +1,168 @@
+.pwa {
+	--pwa-color-primary: #FFFFFF;
+	--pwa-color-secondary: #FFFFFF;
+	--pwa-color-font: #000000;
+	--pwa-color-font-btn: #FFFFFF;
+	--pwa-color-button: #3e8ed0;
+	--pwa-color-button-hover: #3476ad;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.pwa-btn, .pwa-float-btn, .pwa-install {
+	display: none;
+	cursor: pointer;
+	font-family: monospace;
+}
+.pwa-float-btn {
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	width: 60px;
+	height: 60px;
+	background-image: url('/LaunchPad/img/pwa/192-icon.png');
+	background-size: cover;
+	background-position: center;
+	color: var(--pwa-color-font);
+	text-align: center;
+	font-size: 30px;
+	border-radius: 50%;
+	z-index: 100;
+}
+.pwa.pwa-float-btn:hover {
+	filter: opacity(80%);
+}
+.pwa .overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.4);
+	visibility: hidden;
+	opacity: 0;
+	overflow-y: hidden;
+	overscroll-behavior: contain;
+}
+.pwa .overlay:target, .pwa .overlay.popup-show {
+	visibility: visible;
+	opacity: 1;
+	z-index: 9998;
+}
+.pwa .overlay:target .popup, .pwa .overlay.popup-show .popup {
+	opacity: 1;
+}
+.pwa .popup {
+	width: 50%;
+	max-height:calc(100% - 80px);
+	padding: 20px;
+	background: var(--pwa-color-secondary);
+	color: var(--pwa-color-font);
+	position: relative;
+	top:50%;
+	left:50%;
+	text-align: center;
+	box-shadow: 0px 4px 8px 3px rgb(0 0 0 / 15%), 0px 1px 3px rgb(0 0 0 / 30%);
+	opacity: 0;
+	border-radius: 1rem;
+	transition: opacity .4s;
+	transform: translate(-50%,-50%);
+}
+.pwa .popup-header {
+	color: var(--pwa-color-font);
+	word-break: break-word;
+}
+.pwa .popup-header:after {
+	content: "";
+	display: block;
+	width: 100%;
+	height: 0;
+	overflow: visible;
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	border: 0;
+	border-top: 1px solid rgba(0,0,0,.1);
+}
+.pwa .small-popup {
+	width: 40%;
+}
+.pwa .popup-global-close {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	cursor: pointer;
+}
+.pwa .popup-body {
+	overflow:auto;
+	max-height:calc(100vh - 215px);
+	overflow: auto;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	word-break: break-word;
+	overscroll-behavior: contain;
+}
+@media (max-width:768px) {
+	.pwa .popup {
+		width: 80%;
+	}
+	.pwa .popup-body {
+		align-items: initial;
+	}
+}
+.pwa .small-close {
+	background-color: var(--pwa-color-button);
+	color: var(--pwa-color-primary);
+	text-decoration: none;
+	outline: 0;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+	border-radius: 50%;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	font-size: 12px;
+	line-height: 20px;
+}
+.pwa .small-close:before {
+	content: "\2716";
+}
+.pwa .small-close:hover {
+	background-color: var(--pwa-color-button-hover);
+}
+.pwa .pwa-primary-btn {
+	font-weight: 400;
+	color: var(--pwa-color-font-btn);
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	font-size: 1rem;
+	line-height: 1.5;
+	background-color: var(--pwa-color-button);
+	border: none;
+	border-radius: 16px;
+	max-width: 100%;
+	padding: .375rem .75rem;	
+}
+.pwa .pwa-primary-btn:hover {
+	background-color: var(--pwa-color-button-hover);
+	color: var(--pwa-color-primary);
+	border: 2px solid var(--pwa-color-button);
+	text-decoration: none;
+	border: none;
+	outline: 0;
+	box-shadow: none;
+}
+.pwa .pwa-primary-btn:focus {
+	box-shadow: var(--pwa-color-button) 0px 0px 5px 0px;
+	border: none;
+	outline: 0;
+}
